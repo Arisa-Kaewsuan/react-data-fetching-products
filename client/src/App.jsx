@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import axios from "axios";
 
 function App() {
@@ -16,10 +16,8 @@ function App() {
     console.log(response.data);
     setPost(response.data.data);
   };
-  useEffect(() => {
-    getpost();
-  }, []);
 
+  getpost();
   return (
     <div className="App">
       <div className="app-wrapper">
